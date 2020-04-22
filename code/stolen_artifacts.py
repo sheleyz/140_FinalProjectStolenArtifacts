@@ -23,15 +23,15 @@ def airport_code(population):
     airport_code = csv.DictReader(csv_file, delimiter=',')
     for row in airport_code:
       if row['latitude'] == '147.466003':
-        return row['ident']
+        return row['iata_code']
 # if row['latitude'] == latitude:
 
 def main():
-  # Define your variables here
+  # 1: Finding the Airport Variables
   world_cup_country = 'South Africa'
   country = 'Guatemala'
-  # print(host_year(world_cup_country))
-  # print(population(country, host_year(world_cup_country)))
+  
+  # 1: Finding the Airport
   print(airport_code(population(country, host_year(world_cup_country))))
 
   
