@@ -33,6 +33,16 @@ def country_code(letter):
     for row in world_population:
       if row['Country Name'][-1] == letter:
         return row['Country Code']
+      
+def population_count(year):
+  file = 'code/world_population.csv'
+  with open(file) as csv_file:
+    world_population = csv.DictReader(csv_file, delimiter=',')
+    country_count = 0
+    for row in world_population:
+      if int(row[year]) > 2000000:
+        country_count += 1
+    return country_count
 
 
 def main():
@@ -40,13 +50,19 @@ def main():
   world_cup_country = 'South Africa'
   country = 'Guatemala'
   
+  # 2: Locker Number (part 1) Variables
   country_last_letter = 'i'
+  
+  # 3: Locker Number (part 2) Variables
+  country_populations_year = '2000'
   
   # 1: Finding the Airport
   print(airport_code(population(country, host_year(world_cup_country))))
 
-  # 2: Locker Number (part 1)
-  print(country_code(country_last_letter))
+  # 2: Locker Number (part 1) and 3: Locker Number (part 2)
+  print(f"{country_code(country_last_letter)}{population_count(country_populations_year)}")
+  
+
   
 if __name__== "__main__":
   main()
