@@ -103,10 +103,10 @@ def main():
   
   # 5: Lock Code (part 2) Variables
   population_year = '1991' # 1: 2010 2: 1991
-  population_year_2 = '1968' # 1: 2000 2: 1968
+  population_year_2 = '1985' # 1: 2000 2: 1985
   
   # 6: Lock Code (part 3) Variables
-  world_cup_year = '1978' # 1: 2010 2: 1978
+  world_cup_year = '1966' # 1: 2010 2: 1966
   airport_type = 'heliport' # 1 & 2: heliport
   
   # 1: Finding the Airport
@@ -116,7 +116,7 @@ def main():
   print(f"{country_code(country_last_letter)}{population_count(country_populations_year)}")
   
   # 4: Lock Code (part 1) and 5: Lock Code (part 2) and 6: Lock Code (part 3)
-  print(f"{country_index(country_name)} {population_decrease_count(population_year, population_year_2)} {airport_type_count(airport_type, world_cup_winner(world_cup_year))}")
+  print(f"{country_index(country_name)}{population_decrease_count(population_year, population_year_2)}{airport_type_count(airport_type, world_cup_winner(world_cup_year))}")
   
   
 if __name__== "__main__":
